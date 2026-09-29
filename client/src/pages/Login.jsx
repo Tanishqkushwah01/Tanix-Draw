@@ -84,6 +84,7 @@ const Login = () => {
 
             <title>Log in – Tanix Draw</title>
             <meta name="description" content="Log in to Tanix Draw to open your collaborative whiteboards and canvases." />
+            <link rel="canonical" href="https://tanix-draw.vercel.app/login" />
 
             <style>{`
         @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }

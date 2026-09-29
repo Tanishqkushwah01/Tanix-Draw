@@ -16,7 +16,9 @@ const PrivacyPolicy = () => {
         <div className="min-h-screen bg-bg flex flex-col font-['Trebuchet_MS','Helvetica_Neue',sans-serif] text-fg">
             <title>Privacy Policy – Tanix Draw</title>
             <meta name="description" content="Learn how Tanix Draw collects, uses and protects your data." />
-           
+           <link rel="canonical" href="https://tanix-draw.vercel.app/privacy" />
+
+
             <nav className="flex items-center justify-between px-6 md:px-12 h-16 border-b border-line bg-bg sticky top-0 z-100">
                 <Link to="/" className="flex items-center gap-2.5">
                     <span className="w-8.5 h-8.5 bg-accent text-white rounded-[10px] flex items-center justify-center font-bold text-base shrink-0">

@@ -95,7 +95,8 @@ const Register = () => {
 
             <title>Sign up – Tanix Draw</title>
             <meta name="description" content="Create a free Tanix Draw account and start drawing and collaborating in real time." />
-            
+            <link rel="canonical" href="https://tanix-draw.vercel.app/register" />
+
             <style>{`
         @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-10px) rotate(-2deg); } }

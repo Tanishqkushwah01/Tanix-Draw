@@ -19,8 +19,8 @@ const LandingPage = () => {
     return (
         <>
             <title>Tanix Draw – Free Online Collaborative Whiteboard</title>
-            <meta name="description" content="Draw diagrams, sketch ideas and collaborate live with your team on Tanix Draw, a free online whiteboard." />
-          
+           <meta name="description" content="Tanix Draw is a free online collaborative whiteboard. Draw diagrams, sketch ideas and work with your team in real time on an infinite canvas." />
+<link rel="canonical" href="https://tanix-draw.vercel.app/" />
           
             <nav className="sticky top-0 z-100 flex h-16 items-center justify-between border-b border-line bg-bg px-6 md:px-12">
                 <Logo />
