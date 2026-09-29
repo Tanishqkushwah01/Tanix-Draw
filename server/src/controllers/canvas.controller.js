@@ -1,6 +1,7 @@
 import canvasModel from "../models/canvas.model.js";
 import shapeModel from "../models/shape.model.js";
 import userModel from "../models/user.model.js";
+import crypto from "crypto";
 import {
   connectedUsers,
   pendingRequests,
