@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useParams } from "react-router-dom";
 import Toolbar from '../components/CanvasComponents/Toolbar';
 import Canvas from '../components/CanvasComponents/Canvas';
@@ -45,9 +45,9 @@ const CanvasPage = () => {
   const isOwner = canvas?.ownerId?.toString() === userId?.toString();
 
 
-  const handleLocalCursorMove = (uid, x, y, username) => {
-    cursorsBufferRef.current[uid] = { x, y, username };
-  };
+  // const handleLocalCursorMove = (uid, x, y, username) => {
+  //   cursorsBufferRef.current[uid] = { x, y, username };
+  // };
 
   const { gotoDashboard } = useWebNavigate();
 
@@ -97,13 +97,29 @@ const CanvasPage = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCursors({ ...cursorsBufferRef.current });
-    }, 300);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCursors({ ...cursorsBufferRef.current });
+  //   }, 300);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
+
+  const cursorsDirtyRef = useRef(false);
+
+const handleLocalCursorMove = useCallback((uid, x, y, username) => {
+  cursorsBufferRef.current[uid] = { x, y, username };
+  cursorsDirtyRef.current = true;
+}, []);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    if (!cursorsDirtyRef.current) return;
+    cursorsDirtyRef.current = false;
+    setCursors({ ...cursorsBufferRef.current });
+  }, 500);
+  return () => clearInterval(interval);
+}, []);
 
 
 

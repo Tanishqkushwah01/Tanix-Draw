@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { memo, useEffect, useRef } from "react";
 import getUserColor from "../../utils/getUserColor";
 import getShapeBounds from "../../utils/selection/getShapeBounds";
 
@@ -97,4 +97,5 @@ const MiniMap = ({ shapesRef, cursors = {}, userId }) => {
   );
 };
 
-export default MiniMap;
+
+export default memo(MiniMap);

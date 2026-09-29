@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
 import getMousePos from '../../utils/getMousePos';
 import redrawCanvas from "../../utils/redrawCanvas";
 import drawCircle from '../../utils/drawing/drawCircle';
@@ -1691,4 +1691,5 @@ const Canvas = ({ selectedTool, setSelectedTool, isToolLocked, showGrid, theme, 
   );
 };
 
-export default Canvas;
+
+export default memo(Canvas);
