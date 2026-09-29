@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /canvas
 Disallow: /verify-otp
 Disallow: /forgot-password
-Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
+Sitemap: https://tanix-draw.vercel.app/sitemap.xml
