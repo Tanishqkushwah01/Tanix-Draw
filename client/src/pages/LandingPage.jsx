@@ -18,6 +18,10 @@ const LandingPage = () => {
 
     return (
         <>
+            <title>Tanix Draw – Free Online Collaborative Whiteboard</title>
+            <meta name="description" content="Draw diagrams, sketch ideas and collaborate live with your team on Tanix Draw, a free online whiteboard." />
+          
+          
             <nav className="sticky top-0 z-100 flex h-16 items-center justify-between border-b border-line bg-bg px-6 md:px-12">
                 <Logo />
                 <div className="flex items-center gap-5">

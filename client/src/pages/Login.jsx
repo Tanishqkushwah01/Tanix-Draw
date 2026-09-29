@@ -8,7 +8,7 @@ const Login = () => {
     const refEmail = useRef(null);
     const refPassword = useRef(null);
 
-    const {gotoDashboard, gotoForgotPassword, gotoVerifyOtp} = useWebNavigate();
+    const { gotoDashboard, gotoForgotPassword, gotoVerifyOtp } = useWebNavigate();
 
     const [fieldErrors, setFieldErrors] = useState({});
 
@@ -58,9 +58,9 @@ const Login = () => {
 
             if (response.data.success) {
                 localStorage.setItem("userInfo", JSON.stringify(response.data.user));
-                localStorage.removeItem("token");  
+                localStorage.removeItem("token");
                 gotoDashboard();
-                return;  
+                return;
             } else {
                 setNotice(response.data.message || "Something went wrong. Please try again.");
             }
@@ -81,6 +81,10 @@ const Login = () => {
 
     return (
         <div className="min-h-screen bg-bg flex flex-col font-['Trebuchet_MS','Helvetica_Neue',sans-serif] text-fg">
+
+            <title>Log in – Tanix Draw</title>
+            <meta name="description" content="Log in to Tanix Draw to open your collaborative whiteboards and canvases." />
+
             <style>{`
         @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-10px) rotate(-2deg); } }
