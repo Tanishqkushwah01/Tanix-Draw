@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /canvas
+Disallow: /verify-otp
+Disallow: /forgot-password
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml

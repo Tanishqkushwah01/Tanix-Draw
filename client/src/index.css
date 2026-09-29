@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f0ece4;
+  --color-fg: #1a1a1a;
+  --color-muted: #5a5a5a;
+  --color-accent: #e8735a;
+  --color-accent-light: #f5b8ac;
+  --color-line: #d4cec4;
+  --color-card: #faf8f4;
+
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: "Trebuchet MS", "Helvetica Neue", sans-serif;
+
+  --animate-fade-up: fade-up 0.7s ease both;
+  --animate-float: float 3.5s ease-in-out infinite;
+  --animate-float-canvas: float-canvas 4s ease-in-out infinite;
+
+  --animate-peek: peek 10s ease-in-out infinite;
+
+  @keyframes peek {
+    0%, 15%   { transform: translateY(40px); }
+    40%, 65%  { transform: translateY(0); }
+    90%, 100% { transform: translateY(40px); }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50%      { transform: translateY(-10px) rotate(-2deg); }
+  }
+  @keyframes float-canvas {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-6px); }
+  }
+}
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+}
